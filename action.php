@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     	exit;
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        header('Location: facts.html');
+        header('Location: calculator.html');
     }
     
 } else {
