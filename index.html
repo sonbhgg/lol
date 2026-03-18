@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Тест по основам веб-серверов и HTTP</h1>
+    <form id="quizForm">
+        <!-- Вопрос 1 -->
+        <div class="question-block">
+            <div class="question-text">1. На каком порту работает HTTP сервер?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q1_1" name="q1" value="80" checked>
+                    <label for="q1_1">80</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_2" name="q1" value="443">
+                    <label for="q1_2">443</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_3" name="q1" value="5000" checked>
+                    <label for="q1_3">5000</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q1_4" name="q1" value="8080" checked>
+                    <label for="q1_4">8080</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">2. Какой из перечисленных методов HTTP запроса позволяет получить данные?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q2_1" name="q2" value="POST">
+                    <label for="q2_1">POST</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_2" name="q2" value="GET" checked>
+                    <label for="q2_2">GET</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_3" name="q2" value="PUT">
+                    <label for="q2_3">PUT</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q2_4" name="q2" value="PATCH">
+                    <label for="q2_4">PATCH</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">3. Из каких частей состоит HTTP запрос?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q3_1" name="q3" value="Версия HTTP протокола" checked>
+                    <label for="q3_1">Версия HTTP протокола</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q3_2" name="q3" value="HTTP метод" checked>
+                    <label for="q3_2">HTTP метод</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q3_3" name="q3" value="Адрес хоста">
+                    <label for="q3_3">Адрес хоста</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">4. Какие из перечисленных HTTP статусов возвращается в результате успешного ответа сервера?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q4_1" name="q4" value="100-199">
+                    <label for="q4_1">100-199</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q4_2" name="q4" value="200-299" checked>
+                    <label for="q4_2">200-299</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q4_3" name="q4" value="300-399">
+                    <label for="q4_3">300-399</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q4_4" name="q4" value="400-499">
+                    <label for="q4_4">400-499</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q4_5" name="q4" value="500-599">
+                    <label for="q4_5">500-599</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">5. Для чего нужен прокси-сервер?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q5_1" name="q5" value="Кэширование данных" checked>
+                    <label for="q5_1">Кэширование данных</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q5_2" name="q5" value="Ограничение доступа к некоторым сайтам" checked>
+                    <label for="q5_2">Ограничение доступа к некоторым сайтам</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q5_3" name="q5" value="Передача зашифрованных данных">
+                    <label for="q5_3">Передача зашифрованных данных</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">6. Какая из перечисленных спецификаций(стандартов) на каждый HTTP запрос создает новый процесс?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q6_1" name="q6" value="CGI" checked>
+                    <label for="q6_1">CGI</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q6_2" name="q6" value="FastCGI">
+                    <label for="q6_2">FastCGI</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q6_3" name="q6" value="WSGI">
+                    <label for="q6_3">WSGI</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">7. Какой из перечисленных веб-серверов является наиболее популярным среди сайтов миллионников за 2020 год?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q7_1" name="q7" value="Apache">
+                    <label for="q7_1">Apache</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q7_2" name="q7" value="Nginx" checked>
+                    <label for="q7_2">Nginx</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q7_3" name="q7" value="Microsoft-IIS">
+                    <label for="q7_3">Microsoft-IIS</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">8. Из каких частей состоит архитектура веб-сервера Apache?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q8_1" name="q8" value="Модульная система" checked>
+                    <label for="q8_1">Модульная система</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q8_2" name="q8" value="ядро" checked>
+                    <label for="q8_2">Ядро</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">9. Какие компоненты входят в архитектуру веб-сервера Nginx?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q9_1" name="q9" value="мастер-процесс" checked>
+                    <label for="q9_1">Мастер-процесс</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q9_2" name="q9" value="модульная система" checked>
+                    <label for="q9_2">Модульная система</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q9_3" name="q9" value="загрузчик кэша" checked>
+                    <label for="q9_3">Загрузчик кэша</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q9_4" name="q9" value="кэш менеджер" checked>
+                    <label for="q9_4">Кэш менеджер</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="question-text">10. С помощью какой директивы можно задать порт на виртуальном хосте в конфигурационном файле?</div>
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="q10_1" name="q10" value="server">
+                    <label for="q10_1">server</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q10_2" name="q10" value="listen" checked>
+                    <label for="q10_2">listen</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q10_3" name="q10" value="server_listen">
+                    <label for="q10_3">server_listen</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="q10_4" name="q10" value="server_name">
+                    <label for="q10_4">server_name</label>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

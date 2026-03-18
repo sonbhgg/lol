@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интересные факты с изображениями</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .facts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .fact-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .fact-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .fact-content {
+            padding: 20px;
+        }
+        
+        .fact-number {
+            display: inline-block;
+            background-color: #2575fc;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .fact-text {
+            font-size: 1rem;
+            color: #444;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .facts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Интересные факты</h1>
+            <p class="subtitle">10 удивительных вещей, которые вы могли не знать</p>
+        </header>
+        
+        <main class="facts-container">
+            <article class="fact-card">
+                <img src="../images/космос.jpeg" alt="Космос" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">1</div>
+                    <p class="fact-text">Солнечному свету требуется около 8 минут и 20 секунд, чтобы достичь Земли, преодолевая расстояние примерно 150 миллионов километров.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/мозг.jpeg" alt="Мозг" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">2</div>
+                    <p class="fact-text">Человеческий мозг состоит примерно на 75% из воды и весит около 1,5 кг. При этом он потребляет около 20% энергии всего тела.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/горы.jpeg" alt="Горы" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">3</div>
+                    <p class="fact-text">Самая высокая гора в Солнечной системе - Олимп на Марсе. Ее высота составляет около 22 км, что почти в три раза выше Эвереста.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/музыка.jpeg" alt="Музыка" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">4</div>
+                    <p class="fact-text">Музыка может влиять на частоту сердечных сокращений, кровяное давление и даже уменьшать боль. Это называется "музыкальной терапией".</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/кит.jpeg" alt="Кит" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">5</div>
+                    <p class="fact-text">Сердце синего кита настолько огромно, что через его аорту мог бы проплыть взрослый человек. Вес сердца составляет около 600 кг.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/кофе.jpeg" alt="Кофе" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">6</div>
+                    <p class="fact-text">Кофейные зерна на самом деле являются косточками ягод кофейного дерева. Эти ягоды называют "кофейными вишнями".</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/медуза.jpeg" alt="Медуза" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">7</div>
+                    <p class="fact-text">Медузы существуют на Земле более 500 миллионов лет, что делает их старше динозавров. У них нет мозга, сердца и костей.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/книги.jpeg" alt="Книги" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">8</div>
+                    <p class="fact-text">Самая большая библиотека в мире - Библиотека Конгресса США, содержащая более 170 миллионов предметов, включая книги, рукописи и карты.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/мед.jpeg" alt="Мед" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">9</div>
+                    <p class="fact-text">Мед никогда не портится. Археологи находили съедобный мед в древнеегипетских гробницах, возраст которого превышал 3000 лет.</p>
+                </div>
+            </article>
+            
+            <article class="fact-card">
+                <img src="../images/пингвины.jpeg" alt="Пингвины" class="fact-image">
+                <div class="fact-content">
+                    <div class="fact-number">10</div>
+                    <p class="fact-text">Императорские пингвины могут нырять на глубину до 500 метров и задерживать дыхание на 20 минут в поисках пищи.</p>
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
