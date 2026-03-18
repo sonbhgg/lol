@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <h2>Калькулятор</h2>
+
+    <?php
+    $result = '';
+    $error = '';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $num1 = isset($_POST['num1']) ? str_replace(',', '.', $_POST['num1']) : '';
+        $num2 = isset($_POST['num2']) ? str_replace(',', '.', $_POST['num2']) : '';
+
+        if ($num1 === '' || $num2 === '') {
+            $error = 'Заполните оба поля';
+        } elseif (!is_numeric($num1)) {
+            $error = 'Первое значение должно быть числом';
+        } elseif (!is_numeric($num2)) {
+            $error = 'Второе значение должно быть числом';
+        } else {
+            $num1 = floatval($num1);
+            $num2 = floatval($num2);
+
+            if (isset($_POST['add'])) {
+                $result = $num1 + $num2;
+            } elseif (isset($_POST['subtract'])) {
+                $result = $num1 - $num2;
+            } elseif (isset($_POST['multiply'])) {
+                $result = $num1 * $num2;
+            } elseif (isset($_POST['divide'])) {
+                if ($num2 == 0) {
+                    $error = 'Деление на ноль невозможно';
+                } else {
+                    $result = $num1 / $num2;
+                }
+            }
+        }
+    }
+    ?>
+
+    <form method="POST" action="">
+        <label>Первое число:</label>
+        <input type="number" name="num1" step="any" value="<?php echo isset($_POST['num1']) ? htmlspecialchars($_POST['num1']) : ''; ?>">
+
+        <br><br>
+
+        <label>Второе число:</label>
+        <input type="number" name="num2" step="any" value="<?php echo isset($_POST['num2']) ? htmlspecialchars($_POST['num2']) : ''; ?>">
+
+        <br><br>
+
+        <button type="submit" name="add">+</button>
+        <button type="submit" name="subtract">-</button>
+        <button type="submit" name="multiply">*</button>
+        <button type="submit" name="divide">/</button>
+    </form>
+
+    <br>
+
+    <label>Результат:</label>
+    <input type="text" readonly value="<?php 
+        if ($error) {
+            echo $error;
+        } elseif ($result !== '') {
+            echo $result;
+        }
+    ?>">
+</body>
+</html>
